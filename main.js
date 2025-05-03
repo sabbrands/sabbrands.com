@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: 20,
             loop: true,
             autoplay: { 
-                delay: 1500, 
+                delay: 2000, 
                 disableOnInteraction: false, 
                 pauseOnMouseEnter: true 
             },
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ...swiperConfigs.trendingBase,
         autoplay: { 
             ...swiperConfigs.trendingBase.autoplay, 
-            delay: 1200 
+            delay: 2000 
         },
         pagination: {
             el: '.trending-swiper-2 .swiper-pagination',
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ...swiperConfigs.trendingBase,
         autoplay: { 
             ...swiperConfigs.trendingBase.autoplay, 
-            delay: 1800 
+            delay: 2000 
         },
         pagination: {
             el: '.trending-swiper-3 .swiper-pagination',
