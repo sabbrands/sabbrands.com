@@ -161,3 +161,20 @@ footer {
     font-size: 1.5rem;
   }
 }
+/* ===== Custom Button Colors ===== */
+.btn-purple {
+    background-color: #720e9e;
+    color: white;
+}
+.btn-purple:hover {
+    background-color: #5d0c7d;
+    color: white;
+}
+.social-icons a {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
