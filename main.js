@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // Show custom install button (add this to your HTML)
-  document.getElementById('installBtn').style.display = 'block';
-});
-
-document.getElementById('installBtn').addEventListener('click', () => {
-  deferredPrompt.prompt();
-});
-    // Swiper Configs
+       // Swiper Configs
     const swiperConfigs = {
         hero: {
             slidesPerView: 1,
