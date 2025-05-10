@@ -25,3 +25,21 @@
     }
   ]
 }
+{
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "SAB Brands Desktop View"
+    },
+    {
+      "src": "/screenshots/mobile.webp",
+      "sizes": "414x896",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile View"
+    }
+  ]
+}
