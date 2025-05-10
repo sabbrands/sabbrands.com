@@ -1927,9 +1927,6 @@
         </div>
     </div>
 </section>
-<button id="installBtn" style="display: none;">
-  📲 Install App
-</button>
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
@@ -1975,5 +1972,46 @@
     
     <!-- Custom JS -->
     <script src="main.js"></script>
+    <!-- PWA Install Banner (last element before </body>) -->
+<div id="pwa-install-banner" class="pwa-banner">
+  <button id="pwa-install-btn">
+    📲 Install App
+  </button>
+</div>
+
+<script>
+// PWA Installation Logic
+let deferredPrompt;
+
+// Show banner after 5 sec OR on scroll
+setTimeout(showInstallBanner, 5000);
+window.addEventListener('scroll', showInstallBanner, { once: true });
+
+function showInstallBanner() {
+  const banner = document.getElementById('pwa-install-banner');
+  if (banner) banner.style.display = 'block';
+}
+
+// Handle install button click
+document.getElementById('pwa-install-btn')?.addEventListener('click', installPWA);
+
+function installPWA() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(choice => {
+      if (choice.outcome === 'accepted') {
+        document.getElementById('pwa-install-banner').style.display = 'none';
+      }
+    });
+  }
+}
+
+// Listen for PWA install prompt
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  showInstallBanner();
+});
+</script>
 </body>
 </html>
