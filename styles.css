@@ -92,6 +92,12 @@ body {
   object-fit: contain;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Or 'center' if you want everything centered */
+}
+
 .brand-logo:hover {
   transform: scale(1.2);
 }
