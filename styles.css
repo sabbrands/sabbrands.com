@@ -63,12 +63,14 @@ body {
   min-height: 40px;
 }
 
-.brand-card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
+/* Brand Grid */
+.brand-card {
+  aspect-ratio: 1;
+  width: var(--brand-box-size);
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .brand-card:hover {
@@ -78,16 +80,16 @@ body {
 
 .brand-logo-container {
   height: 125px;
+  background: center/contain no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.5rem;
-}
+  }
 
 .brand-logo {
   max-height: 100%;
   max-width: 100%;
-  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .brand-logo:hover {
