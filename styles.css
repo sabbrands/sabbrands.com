@@ -63,14 +63,12 @@ body {
   min-height: 40px;
 }
 
-/* Brand Grid */
-.brand-card {
-  aspect-ratio: 1;
-  width: var(--brand-box-size);
-  margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
-  overflow: hidden;
+.brand-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .brand-card:hover {
@@ -83,19 +81,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  }
-
-.brand-logo {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Or 'center' if you want everything centered */
+.brand-logo {
+  max-height: 80%;
+  max-width: 80%;
+  object-fit: contain;
 }
 
 .brand-logo:hover {
